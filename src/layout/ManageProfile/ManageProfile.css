@@ -1,0 +1,144 @@
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex_ai_c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex_jc_sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.m_profile {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#101010), to(#272727));
+  background: linear-gradient(to bottom, #101010, #272727);
+  height: 100vh;
+  width: 100%;
+}
+
+.m_profile__header {
+  width: 100%;
+  height: 60px;
+  background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(20, 20, 20, 0));
+  padding: 1rem 0 1rem 3rem;
+}
+
+.m_profile__container, .m_profile__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.m_profile__container {
+  height: calc(100% - 60px);
+}
+
+.m_profile__content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.m_profile__title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.m_profile__list, .m_profile__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.m_profile__item {
+  cursor: pointer;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.m_profile__list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 4rem;
+  gap: 2rem;
+}
+
+.m_profile__item:hover .m_profile__name {
+  opacity: 1;
+}
+
+.m_profile__item:hover .prof--ad {
+  background-color: rgba(255, 255, 255, 0.281);
+}
+
+.m_profile__name {
+  font-size: 1.2rem;
+  opacity: .7;
+}
+
+.m_profile__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+}
+
+.m_profile__avatar svg {
+  width: 80%;
+  height: 80%;
+  opacity: .7;
+}
+
+.m_profile__avatar.prof--ad {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.m_profile__edit a {
+  padding: .5rem 2rem;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  opacity: .7;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.m_profile__edit a:hover {
+  opacity: 1;
+}
+/*# sourceMappingURL=ManageProfile.css.map */

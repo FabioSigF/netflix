@@ -1,0 +1,133 @@
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(20, 20, 20, 0)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(20, 20, 20, 0));
+  width: 100%;
+  padding: 0 2rem;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background 400ms ease;
+  transition: background 400ms ease;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.menu__link {
+  color: white;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+}
+
+.menu__link.active {
+  font-weight: bold;
+}
+
+.menu__link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.menu__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__user__kids a {
+  color: white;
+}
+
+.menu__user__notification, .menu__user__search {
+  color: white;
+  cursor: pointer;
+}
+
+.menu__user__notification {
+  font-size: 1.5rem;
+}
+
+.menu__user__search {
+  font-size: 1.2rem;
+}
+
+.menu__hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.menu__hamburger span {
+  position: absolute;
+  top: 10px;
+}
+
+.menu__hamburger span, .menu__hamburger span::before, .menu__hamburger span::after {
+  display: block;
+  background-color: white;
+  width: 100%;
+  height: 2px;
+}
+
+.menu__hamburger span::before, .menu__hamburger span::after {
+  content: '';
+  position: absolute;
+}
+
+.menu__hamburger span::before {
+  top: -7px;
+}
+
+.menu__hamburger span::after {
+  top: 7px;
+}
+
+.menu__hamburger span.open {
+  background-color: transparent;
+}
+
+.menu__hamburger span.open::before {
+  -webkit-transform: rotate(220deg) translate(-5px, -5px);
+          transform: rotate(220deg) translate(-5px, -5px);
+}
+
+.menu__hamburger span.open::after {
+  -webkit-transform: rotate(-220deg) translate(-5px, 5px);
+          transform: rotate(-220deg) translate(-5px, 5px);
+}
+/*# sourceMappingURL=Header.css.map */

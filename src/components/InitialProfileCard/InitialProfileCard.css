@@ -1,0 +1,94 @@
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex_ai_c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex_jc_sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.initial_profile__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.initial_profile__item:hover .initial_profile__avatar:not(.prof--ad) {
+  border: 3px solid #fff;
+}
+
+.initial_profile__item:hover .initial_profile__name {
+  opacity: 1;
+}
+
+.initial_profile__item:hover .prof--ad {
+  background-color: rgba(255, 255, 255, 0.281);
+}
+
+.initial_profile__name {
+  font-size: 1.2rem;
+  opacity: .7;
+}
+
+.initial_profile__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+}
+
+.initial_profile__avatar svg {
+  width: 80%;
+  height: 80%;
+  opacity: .7;
+}
+
+.initial_profile__avatar.prof--ad {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.initial_profile__avatar#user1 {
+  background-image: url("../../imgs/users/user1.png");
+}
+
+.initial_profile__avatar#user2 {
+  background-image: url("../../imgs/users/user4.png");
+}
+
+.initial_profile__avatar#user3 {
+  background-image: url("../../imgs/users/user9.png");
+}
+
+.initial_profile__avatar#user4 {
+  background-image: url("../../imgs/users/user7.png");
+}
+/*# sourceMappingURL=InitialProfileCard.css.map */
