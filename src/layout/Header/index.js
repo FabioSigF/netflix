@@ -1,5 +1,5 @@
-import MobileHeader from "../../components/MobileHeader";
-import MainHeader from "../../components/MainHeader";
+import MobileHeader from "../../layout/MobileHeader";
+import MainHeader from "../../layout/MainHeader";
 
 export default function Header({windowWidth, movieList}){
   return(
