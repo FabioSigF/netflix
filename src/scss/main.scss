@@ -1,0 +1,25 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;700&display=swap');
+
+//OTHERS
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/base";
+@import "utils/utils";
+
+//LAYOUT 
+@import "layout/header";
+@import "layout/loading";
+@import "layout/logo";
+@import "layout/mobileHeader";
+@import "layout/mobileHeaderBottom";
+
+//COMPONENTS
+@import "components/accountsCard";
+@import "components/categorias";
+@import "components/featureMovie";
+@import "components/movieRow";
+
+//PAGES
+@import "pages/accounts";
+@import "pages/home";

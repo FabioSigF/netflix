@@ -1,5 +1,4 @@
 import React from "react";
-import './Header.css';
 import Logo from '../Logo';
 import user from '../../imgs/user.png';
 import { FaSearch, FaBell } from 'react-icons/fa';

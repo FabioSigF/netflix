@@ -1,0 +1,15 @@
+.lists {
+  margin-top: -150px;
+}
+
+.footer {
+  padding: 50px 0;
+  text-align: center;
+  background-color: $bg-color-dark;
+}
+
+@include media-bg {
+  .lists {
+    margin-top: -120px;
+  }
+}

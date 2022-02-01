@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import './Categorias.css'
+import React, { useState } from 'react';
+
 export default function Categorias({ lista }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const item = document.querySelectorAll('.categorias__link[id]');
-  const container = document.querySelector('.categorias_container');
+  
   
   function linkAtivo(e, id) {
     item.forEach(item => {
@@ -14,6 +14,7 @@ export default function Categorias({ lista }) {
   }
 
   function toggleMenu() {
+    const container = document.querySelector('.categorias_container');
     if (menuOpen !== true) {
       container.classList.add('open');
       setMenuOpen(true);
@@ -31,7 +32,7 @@ export default function Categorias({ lista }) {
       <div className="categorias_container flex flex_ai_c">
         <ul className="categorias__lista flex flex_ai_c" data-lista>
           <li className="categorias__item">
-            <a href="/" className='categorias__link active' id='0'>Início</a>
+            <a href="/home" className='categorias__link active' id='0'>Início</a>
           </li>
           {lista.map((item, id) => (
             <li className="categorias__item" key={id}>

@@ -1,5 +1,4 @@
 import React from "react";
-import './MobileHeader.css';
 import Logo from "../Logo";
 import user from '../../imgs/user.png';
 import { FaSearch, FaTv } from 'react-icons/fa';

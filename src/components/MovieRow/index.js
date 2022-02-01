@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import './MovieRow.css';
 
 export default function MovieRow({ title, items }) {
 

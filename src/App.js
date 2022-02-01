@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './layout/Home'
+//Components
+import Home from './pages/Home'
 import Tmdb from "./Tmdb.js";
-import './Styles/main.css'
-import ManageProfile from "./layout/ManageProfile";
-export default function App() {
+import ManageProfile from "./pages/Accounts";
 
+
+export default function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [featureData, setFeatureData] = useState(null);
   const [movieList, setMovieList] = useState([]);
 
+  //Função para captar o tamanho da tela e enviar ao state
   function handleResize() {
     setWindowWidth(window.innerWidth)
   }
+
   useEffect(() => { 
     window.addEventListener('resize', handleResize);
     
@@ -35,12 +38,22 @@ export default function App() {
 
 return (
   <Router>
-    <Routes>
-      <Route path="/" element={<ManageProfile />} />
-      <Route path="/home" element={<Home windowWidth={windowWidth} movieList={movieList} featureData={featureData}/>}
-      />
-    </Routes>
 
+    <Routes>
+
+      <Route 
+        path="/" 
+        element={<ManageProfile />} 
+      />
+      <Route 
+        path="/home" 
+        element={<Home windowWidth={windowWidth} 
+        movieList={movieList} 
+        featureData={featureData}/>}
+      />
+      
+    </Routes>
+    
   </Router>
 );
 }
