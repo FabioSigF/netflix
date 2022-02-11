@@ -1,0 +1,38 @@
+.footer {
+  padding: 4rem 0 2rem;
+  width: 100%;
+  background-color: $bg-color-transparent-07;
+  &__title,
+  &__link,
+  a {
+    font-weight: 400;
+    color: $text-dark-color;
+  }
+  &__link,
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    padding-bottom: 1rem;
+  }
+
+  &__list {
+    max-height: 150px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: .625rem;
+  }
+  &__link {
+    font-size: .875rem;
+  }
+  &__others {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+    opacity: .5;
+  }
+}

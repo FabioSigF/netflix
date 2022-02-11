@@ -9,3 +9,19 @@
 .flex_jc_sb {
   justify-content: space-between;
 }
+
+.container {
+  width: 100%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+@include media-bg {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+}

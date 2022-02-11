@@ -61,5 +61,98 @@
     &__search{
       font-size: 1.2rem;
     }
+    &__icon img{
+      border-radius: 5px;
+      width: 32px;
+      height: 32px;
+    }
+
+    &__profile {
+      gap: .5rem;
+      cursor: pointer;
+      &_btn svg {
+        transition: transform 300ms ease;
+      }
+      &:hover {
+        .menu__user__profile_btn svg{
+          transform: rotate(180deg);
+        }
+        .menu__profile {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+  &__profile {
+    background-color: $bg-color-dark;
+    border: 1px solid $bg-color-transparent;
+    position: absolute;
+    padding: 1rem .8rem;
+    height: 287px;
+    width: 179px;
+    top: 71px;
+    right: 2rem;
+    font-size: .875rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease;
+
+    &__caret {
+      font-size: 1.5rem;
+      top: -20px;
+      right: 27px;
+      position: absolute;
+    }
+
+    &__account {
+      gap: .5rem;
+      padding-bottom: .5rem;
+
+      &__img {
+        width: 32px;
+        height: 32px;
+        border-radius: 5px;
+      }
+      &:hover {
+        cursor: pointer;
+        .menu__profile__account__name {
+          text-decoration: underline;
+        }
+      }
+    }
+    &__accountManage button{
+      background: none;
+      border: none;
+      color: $text-color;
+      cursor: pointer;
+      padding: 1rem 0;
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        padding-top: 1rem;
+        border-bottom: 1px solid $bg-color-lighter;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &__manage{
+      padding: 1rem 0;
+      font-weight: 700;
+      &__item {
+        padding-bottom: .5rem;
+      }
+      &__link {
+        color: $text-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }

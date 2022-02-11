@@ -1,0 +1,47 @@
+.inputEmail {
+  &__title {
+    font-weight: 400;
+    text-align: center;
+  }
+  &__cta {
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    max-width: 640px;
+    width: 100%;
+  }
+  &__input {
+    min-width: 450px;
+    min-height: 60px;
+    height: 100%;
+    border: 1px solid $text-lighter-color;
+    padding: .625rem .625rem 0;
+    font-size: 1.2rem;
+    outline: none;
+
+    &::placeholder {
+      visibility: hidden;
+      color: $text-color;
+    }
+
+    
+    &_container{
+      position: relative;
+    }
+    &_label {
+      position: absolute;
+      top: 1.1875rem;
+      left: .625rem;
+      font-size: 1.125rem;
+      color: $text-dark-color;
+      transition: all 250ms;
+    }
+
+    &:not(:placeholder-shown) + &_label, 
+    &:focus + &_label{
+      font-size: .675rem;
+      top: .625rem;
+      transition: all 250ms;
+    }
+  }
+}

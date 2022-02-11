@@ -1,0 +1,44 @@
+.myFooter {
+  &__description{
+    width: 40%;
+    p {
+      color: $text-dark-color;
+      text-align: left;
+      &:not(:last-child){
+        padding-bottom: .5rem;
+      }
+    }
+  }
+  &__social {
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    p{
+      padding-bottom: .5rem;
+      strong {
+        color: $contrast-color;
+      }
+    }
+    &__item {
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: color 200ms ease;
+      
+      &:hover {
+        a {
+          color: $contrast-color;
+        }
+      }
+      a {
+        color: $text-color;
+        margin-left: 1rem;
+      }
+    }
+
+    &__icon {
+      padding: .5rem;
+      border-radius: 5px;
+      background-color: $bg-color-lighter;
+    }
+  }
+}

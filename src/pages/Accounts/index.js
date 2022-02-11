@@ -2,9 +2,8 @@ import { FaPlusCircle } from 'react-icons/fa';
 import AccountsCard from '../../components/AccountsCard';
 import Logo from '../../components/Logo';
 
-
-export default function ManageProfile() {
-
+export default function Accounts({users, toggleAccount}) {
+  
   return (
     <>
       <section className='accounts'>
@@ -15,27 +14,16 @@ export default function ManageProfile() {
           <div className='accounts__content'>
             <h2 className='accounts__title'>Quem está assistindo?</h2>
             <ul className='accounts__list'>
-              <AccountsCard 
-                link="/home"
-                name="Fábio"
-                bg="1"
-              />
-              <AccountsCard 
-                link="/home"
-                name="Felipe"
-                bg="2"
-              />
-              <AccountsCard 
-                link="/home"
-                name="Silvana"
-                bg="3"
-              />
-              <AccountsCard 
-                link="/home"
-                name="Isabella"
-                bg="4"
-              />
-              <AccountsCard 
+              {users.map((item, key) => (
+                <AccountsCard
+                  key={key}
+                  link={item.link}
+                  name={item.name}
+                  icon={item.icon}
+                  onClick={toggleAccount}
+                />
+              ))}
+              <AccountsCard
                 link="/home"
                 name="Adicionar perfil"
                 bg="5"

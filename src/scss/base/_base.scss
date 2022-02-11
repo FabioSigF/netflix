@@ -17,4 +17,11 @@ body  {
   color: #fff;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: none;
 }

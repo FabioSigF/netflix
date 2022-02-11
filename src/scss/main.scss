@@ -12,6 +12,8 @@
 @import "layout/loading";
 @import "layout/mobileHeader";
 @import "layout/mobileHeaderBottom";
+@import "layout/footer";
+@import "layout/myFooter";
 
 //COMPONENTS
 @import "components/accountsCard";
@@ -19,7 +21,21 @@
 @import "components/featureMovie";
 @import "components/logo";
 @import "components/movieRow";
+@import "components/linkBtn";
+@import "components/inputEmail";
+@import "components/faq";
+@import "components/languageSelect";
+@import "components/form";
+@import "components/inputForm";
+@import "components/button";
+@import "components/movieInfo";
+@import "components/myListBtn";
+@import "components/watchBtn";
 
 //PAGES
 @import "pages/accounts";
 @import "pages/home";
+@import "pages/initial";
+@import "pages/login";
+@import "pages/newClient";
+

@@ -1,0 +1,39 @@
+{
+  "clients": [
+    {
+      "email": "fabiosgcontato@gmail.com",
+      "password": "123456",
+      "id": 0
+    },
+    {
+      "email": "fabio@email.com",
+      "password": "123455",
+      "id": 1
+    },
+    {
+      "email": "fabiosignorini19@gmail.com",
+      "password": "123455Aa",
+      "id": 2
+    },
+    {
+      "email": "felipegostosao123@yahoo.com",
+      "password": "123456Ab",
+      "id": 3
+    },
+    {
+      "email": "felipegostosao123@yahoo.com",
+      "password": "123456Ab",
+      "id": 4
+    },
+    {
+      "email": "felipecuzao@gmail",
+      "password": "123456aA",
+      "id": 5
+    },
+    {
+      "email": "asdasd@aaa",
+      "password": "1234555Aa",
+      "id": 6
+    }
+  ]
+}

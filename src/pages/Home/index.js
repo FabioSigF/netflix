@@ -4,19 +4,21 @@ import MovieRow from "../../components/MovieRow";
 import Loading from "../../layout/Loading";
 import Header from "../../layout/Header";
 import MobileHeaderBottom from '../../layout/MobileHeader/MobileHeaderBottom';
-export default function Home({ windowWidth, featureData, movieList }) {
+import MyFooter from '../../layout/MyFooter';
+export default function Home({ windowWidth, featureData, movieList, loggedUser, users }) {
 
   const [loading, setLoading] = useState(true);
-
+  const [father, setFather] = useState('')
   useEffect(() => {
     const loadData = async () => {
 
       await new Promise((r) => setTimeout(r, 500));
       setLoading((loading) => !loading);
     };
-      
+    console.log(father)
     loadData();
   }, [])
+
     
   if (loading) {
       return <Loading />
@@ -25,7 +27,7 @@ export default function Home({ windowWidth, featureData, movieList }) {
   else {
   return (
     <>
-      <Header windowWidth={windowWidth} movieList={movieList}/>
+      <Header windowWidth={windowWidth} movieList={movieList} loggedUser={loggedUser} users={users}/>
       {featureData &&
         <FeatureMovie
           item={featureData}
@@ -39,15 +41,11 @@ export default function Home({ windowWidth, featureData, movieList }) {
             key={key}
             title={item.title}
             items={item.items}
+            setProps={setFather}
           />
         ))}
       </section>
-      <footer className="footer">
-        <p>Feito com dedicação por Fábio Signorini</p>
-        <p>Direitos de imagem para Netflix</p>
-        <p>Dados utilizados do site Themoviedb.org</p>
-      </footer>
-
+      <MyFooter />
       {movieList.length <= 0 &&
         <Loading />
       }

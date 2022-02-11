@@ -1,5 +1,7 @@
 import React from "react";
 import { FaPlay, FaPlus } from 'react-icons/fa';
+import WatchBtn from "../WatchBtn";
+import MyListBtn from "../MyListBtn";
 export default function FeatureMovie({ item, windowWidth }) {
 
   //Seleciona gêneros dos filmes
@@ -31,8 +33,8 @@ export default function FeatureMovie({ item, windowWidth }) {
               {description}
             </div>
             <div className="featured__btns">
-              <a className="watch_btn" href={`watch/${item.id}`}><FaPlay />Assistir</a>
-              <a className="mylist_btn" href={`list/add/${item.id}`}><FaPlus /> Minha Lista</a>
+              <WatchBtn item={item} />
+              <MyListBtn item={item} />
             </div>
             <div className="featured__genres">
               <strong>Gêneros: </strong>

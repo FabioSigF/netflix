@@ -1,9 +1,16 @@
 $text-color: #fff;
 $text-lighter-color: #999999;
 $text-dark-color: #808080;
+$text-darkest-color: #333;
+$text-error-color: #e87c03;
 $contrast-color: #b9090b;
 $bg-color-dark: #000;
+$bg-color-light: #fff;
 $bg-color-lighter: #141414;
 $bg-color-transparent: rgba(0,0,0,0.9);
+$bg-color-transparent-07: rgba(0,0,0,0.7);
 $bg-color-linear: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(20,20,20,0));
+$bg-color-linear-toTop: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(20,20,20,0));
 
+$bg-color-input: #454545;
+$faqBtn: #333;
