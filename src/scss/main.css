@@ -137,23 +137,6 @@ button {
           align-items: center;
 }
 
-.menu__user__kids a {
-  color: white;
-}
-
-.menu__user__notification, .menu__user__search {
-  color: white;
-  cursor: pointer;
-}
-
-.menu__user__notification {
-  font-size: 1.5rem;
-}
-
-.menu__user__search {
-  font-size: 1.2rem;
-}
-
 .menu__user__icon img {
   border-radius: 5px;
   width: 32px;
@@ -180,6 +163,89 @@ button {
 .menu__user__profile:hover .menu__profile {
   visibility: visible;
   opacity: 1;
+}
+
+.menu__kids a {
+  color: white;
+}
+
+.menu__notification, .menu__search {
+  color: white;
+  cursor: pointer;
+}
+
+.menu__notification {
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.menu__notification:hover .menu__notification__card {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__notification__alert {
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  background-color: #b9090b;
+  font-size: .6rem;
+  top: -5px;
+  right: -5px;
+}
+
+.menu__notification__card {
+  border: 1px solid #999999;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: -250px;
+  top: 51px;
+  max-width: 408px;
+  max-height: 350px;
+  overflow-y: scroll;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all ease 200ms;
+  transition: all ease 200ms;
+}
+
+.menu__notification__item:not(:last-child) {
+  border-bottom: 1px solid #999999;
+}
+
+.menu__notification__item {
+  padding: 1rem;
+}
+
+.menu__notification__link {
+  color: #fff;
+}
+
+.menu__notification__img {
+  max-width: 70px;
+}
+
+.menu__notification__text {
+  margin-left: 1rem;
+}
+
+.menu__notification__about {
+  display: block;
+  font-size: .875rem;
+  opacity: .7;
+}
+
+.menu__notification__title {
+  display: block;
+  font-size: 1.375rem;
+}
+
+.menu__search {
+  font-size: 1.2rem;
 }
 
 .menu__profile {
@@ -1421,7 +1487,8 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), color-stop(70%, rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) 70%);
   left: 0;
   bottom: 0;
 }
@@ -1640,6 +1707,39 @@ button {
   padding: 50px 0;
   text-align: center;
   background-color: #000;
+}
+
+.myList {
+  position: relative;
+  margin-top: 100px;
+  min-height: calc(100vh - 100px);
+}
+
+.myList__title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.myList__list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.myList__img {
+  cursor: pointer;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all ease 200ms;
+  transition: all ease 200ms;
+  width: 150px;
+}
+
+.myList__img:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 @media screen and (min-width: 1200px) {

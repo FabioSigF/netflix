@@ -10,6 +10,8 @@ import NewClient from "./pages/NewClient";
 import CreatePassword from "./pages/NewClient/CreatePassword";
 import ConfigCard from "./pages/NewClient/ConfigCard";
 import Congratulations from "./pages/NewClient/Congratulations";
+import MyList from "./pages/Home/MyList";
+import Browse from "./pages/Home/Browse";
 
 
 export default function App() {
@@ -29,7 +31,6 @@ export default function App() {
       // Pegando a lista Total
       let list = await Tmdb.getHomeList();
       setMovieList(list);
-      console.log(movieList)
 
       //Pegando o feature
       let originals = list.filter(i => i.slug === 'originals');
@@ -57,6 +58,13 @@ export default function App() {
     imgAccount.length > 0 && setLoggedUser(imgAccount)
   }
 
+  const [movieInfo, setMovieInfo] = useState('')
+  function openMoreInfo(item) {
+    setMovieInfo(item)
+    const movieInfo = document.querySelector('.movieInfo')
+    movieInfo.classList.add('open')
+  }
+
   return (
     <Router>
 
@@ -67,21 +75,29 @@ export default function App() {
         <Route path="/accounts"
           element={<Accounts users={users} toggleAccount={toggleAccount} />}
         />
-        <Route path="/home"
+        <Route path="home"
           element={
             <Home
               windowWidth={windowWidth}
               movieList={movieList}
-              featureData={featureData}
+              movieInfo={movieInfo}
               loggedUser={loggedUser}
               users={users}
             />}
-        />
+        >
+          <Route index element={<Browse
+            featureData={featureData}
+            windowWidth={windowWidth}
+            movieList={movieList}
+            openMoreInfo={openMoreInfo}
+          />} />
+          <Route path="my-list" element={<MyList setMovieInfo={openMoreInfo} />} />
+        </Route>
         <Route path="new-client" element={<NewClient />}>
-          <Route index element={<ConfigCard />}/>
-          <Route path="config" element={<ConfigCard />}/>
-          <Route path="password" element={<CreatePassword />}/>
-          <Route path="congrat" element={<Congratulations />}/>
+          <Route index element={<ConfigCard />} />
+          <Route path="config" element={<ConfigCard />} />
+          <Route path="password" element={<CreatePassword />} />
+          <Route path="congrat" element={<Congratulations />} />
         </Route>
       </Routes>
 

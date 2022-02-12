@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import MovieInfo from '../MovieInfo';
-import Tmdb from "../../Tmdb";
-export default function MovieRow({ title, items, setProps }) {
+
+export default function MovieRow({ title, items, onClickItem }) {
 
   const [scrollX, setScrollX] = useState(0)
-  const [showMoreInfo, setShowMoreInfo] = useState(false)
-  const [movieData, setMovieData] = useState()
 
   function handleLeftArrow() {
     let x = scrollX + Math.round(window.innerWidth / 1.15);
@@ -25,15 +22,6 @@ export default function MovieRow({ title, items, setProps }) {
     setScrollX(x)
   }
 
-  function moreInfo(item) {
-    setMovieData(item)
-    setProps(item)
-    setShowMoreInfo(true)
-    const movieInfo = document.querySelector('.movieInfo')
-    movieInfo.classList.add('open')
-  }
-
-
 return (
   <>
     <div className="movieRow">
@@ -49,7 +37,7 @@ return (
           {items.results.length > 0 && items.results.map((item, key) => {
             if (item.poster_path !== null) {
               return (
-                <div key={key} className="movieRow__item" onClick={() => moreInfo(item)}>
+                <div key={key} className="movieRow__item" onClick={() => onClickItem(item)}>
                   <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_name} />
                 </div>
               )
@@ -68,9 +56,6 @@ return (
         </div>
       </div>
     </div>
-    {showMoreInfo &&
-      <MovieInfo movie={movieData} />
-    }
   </>
 )
 }

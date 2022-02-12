@@ -34,7 +34,7 @@ export default function FeatureMovie({ item, windowWidth }) {
             </div>
             <div className="featured__btns">
               <WatchBtn item={item} />
-              <MyListBtn item={item} />
+              <MyListBtn movie={item} />
             </div>
             <div className="featured__genres">
               <strong>Gêneros: </strong>

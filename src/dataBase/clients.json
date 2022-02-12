@@ -1,39 +1,65 @@
 {
   "clients": [
     {
-      "email": "fabiosgcontato@gmail.com",
-      "password": "123456",
-      "id": 0
-    },
-    {
       "email": "fabio@email.com",
       "password": "123455",
-      "id": 1
-    },
+      "id": 0
+    }
+  ],
+  "myFavorites": [
     {
-      "email": "fabiosignorini19@gmail.com",
-      "password": "123455Aa",
+      "name": "Sex Education",
+      "backdrop_path": "/yqbTWmaP4fdnrbgwPQDHITktyOE.jpg",
+      "poster_path": "/cK6JhcZFpwVW9tldz3llodY2TeY.jpg",
+      "vote_average": 8.4,
+      "releaseDate": "2019",
+      "overview": "O inseguro Otis manja tudo quando o negócio é aconselhamento sexual, graças à sua mãe sexóloga. E aí a rebelde Maeve propõe criar uma clínica de terapia sexual na escola.",
       "id": 2
     },
     {
-      "email": "felipegostosao123@yahoo.com",
-      "password": "123456Ab",
-      "id": 3
-    },
-    {
-      "email": "felipegostosao123@yahoo.com",
-      "password": "123456Ab",
+      "name": "O Mar da Tranquilidade",
+      "backdrop_path": "/9hNJ3fvIVd4WE3rU1Us2awoTpgM.jpg",
+      "poster_path": "/tF4dl94nLabniP1TDeGa61OZTQI.jpg",
+      "vote_average": 8.1,
+      "releaseDate": "2021",
+      "overview": "Em uma missão perigosa na Lua, exploradores espaciais tentam recuperar amostras em uma estação de pesquisa abandonada e repleta de segredos.",
       "id": 4
     },
     {
-      "email": "felipecuzao@gmail",
-      "password": "123456aA",
+      "name": "The Ice Age Adventures of Buck Wild",
+      "backdrop_path": "/eG0oOQVsniPAuecPzDD1B1gnYWy.jpg",
+      "poster_path": "/1iVjKCGHPVNj7IQVB1DdpL8U7Y8.jpg",
+      "vote_average": 7.4,
+      "releaseDate": "2022",
+      "overview": "As peripécias hilárias dos mamíferos pré-históricos favoritos de todo mundo continuam, enquanto os gambás caçadores de emoções Crash e Eddie se juntam ao seu amigo caolho, aventureiro e caçador de dinossauros, a doninha Buck Wild, para enfrentar os dinossauros rebeldes do Mundo Perdido.",
       "id": 5
     },
     {
-      "email": "asdasd@aaa",
-      "password": "1234555Aa",
+      "name": "Stranger Things",
+      "backdrop_path": "/rcA17r3hfHtRrk3Xs3hXrgGeSGT.jpg",
+      "poster_path": "/jUrDkXkVXe5cDIYA7Ss81P1CvtX.jpg",
+      "vote_average": 8.6,
+      "releaseDate": 2016,
+      "overview": "Quando um garoto desaparece, a cidade toda participa nas buscas. Mas o que encontram são segredos, forças sobrenaturais e uma menina.",
       "id": 6
+    },
+    {
+      "name": "지금 우리 학교는",
+      "backdrop_path": "/8Xs20y8gFR0W9u8Yy9NKdpZtSu7.jpg",
+      "poster_path": "/d9yefq8dNke4UbuqStBtUcO9TxD.jpg",
+      "vote_average": 8.8,
+      "releaseDate": 2022,
+      "overview": "Uma epidemia mortal surge em uma escola. Encurralados, os alunos só tem uma opção: lutar com todas as forças para não virarem zumbis.",
+      "id": 7
+    },
+    {
+      "name": "Rebelde",
+      "backdrop_path": "/5npLowyLY2fqUpyAOq2x0bXwwIv.jpg",
+      "poster_path": "/jRlI5euugVZR6a1Ptt0nSWeiWH.jpg",
+      "vote_average": 7.5,
+      "releaseDate": 2022,
+      "overview": "No colégio, começa o novo ano escolar, mas uma sociedade secreta ameaça os sonhos musicais dos alunos.",
+      "id": 8
     }
   ]
 }
