@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Logo from '../../components/Logo';
 import dados from "./inicialData";
 import LinkBtn from "../../components/LinkBtn";
@@ -13,6 +13,11 @@ import LanguageSelect from "../../components/LanguageSelect";
 const dadosHome = dados.initialText.home;
 const dadosBenefits = dados.initialText.benefits;
 export default function Initial() {
+
+  useEffect(()=> {
+    document.title="Netflix Brasil - assista a filmes e séries online!"
+  })
+  
   return (
     <>
       <header className="initial__header">
@@ -45,7 +50,7 @@ export default function Initial() {
         <section className="initial__benefits">
           {dadosBenefits.map((item, key) => (
             <section className={`initial__section`} key={key}>
-              <Container customClass={`initial__benefits__item flex flex_ai_c flex_jc_sb ${key % 2 !== 0 && 'initial__benefits__item--reverse'}`}>
+              <Container customClass={`initial__benefits__item flex flex_ai_c ${key % 2 !== 0 && 'initial__benefits__item--reverse'}`}>
                 <div className="initial__benefits__titles">
                   <h2 className="initial__benefits__title">{item.title}</h2>
                   <h3 className="initial__benefits__subtitle">{item.subtitle}</h3>

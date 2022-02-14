@@ -4,8 +4,8 @@
   border-radius: 3px;
   text-align: center;
   &.button--main {
-    background-color: $contrast-color;
-    color: $text-color;
+    background-color: colors(contrast);
+    color: colors(text);
   }
 
   &.button--lg {

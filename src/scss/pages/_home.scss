@@ -2,12 +2,6 @@
   margin-top: -150px;
 }
 
-.myFooter {
-  padding: 50px 0;
-  text-align: center;
-  background-color: $bg-color-dark;
-}
-
 .myList {
   position: relative;
   margin-top: 100px;
@@ -35,7 +29,7 @@
   }
 }
 
-@include media-bg {
+@include media(normal) {
   .lists {
     margin-top: -120px;
   }

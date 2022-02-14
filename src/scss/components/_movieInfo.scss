@@ -1,5 +1,5 @@
 .movieInfo {
-  background-color: $bg-color-transparent-07;
+  background-color: colors(bg-transparent-07);
   display: none;
   position: fixed;
   top: 0;
@@ -59,19 +59,19 @@
     gap: 1rem;
   }
   &__btn {
-    border: 3px solid $text-lighter-color;
+    border: 3px solid colors(text-light);
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.3rem;
     padding: .675rem;
 
     &:hover {
-      border-color: $text-color;
+      border-color: colors(text);
     }
   }
 
   &__close {
-    background-color: $bg-color-lighter;
+    background-color: colors(bg-lighter);
     border-radius: 50%;
     cursor: pointer;
     font-size: 2.5rem;
@@ -81,7 +81,7 @@
   }
 
   &__about {
-    background:linear-gradient(180deg, rgba(0,0,0,0)0%, rgba(24,24,24,1) 30%);;
+    background: linear-gradient(180deg, rgba(0,0,0,0)0%, rgba(24,24,24,1) 30%);;
     position: relative;
     margin-top: -70px;
     padding: 2rem 2rem 3rem 2rem;
@@ -96,7 +96,7 @@
     padding-bottom: 1rem;
   }
   &__points {
-    color: #46d369;
+    color: colors(points);
     font-weight: 700;
     margin-right: 1rem;
   }

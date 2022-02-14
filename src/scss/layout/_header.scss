@@ -32,7 +32,7 @@
   }
 
   &__link {
-    color: white;
+    color: colors(text);
     transition: color 200ms ease;
     &.active {
       font-weight: bold;
@@ -72,11 +72,11 @@
 
   }
   &__kids a{
-    color: white;
+    color: colors(text);
   }
   &__notification,
   &__search {
-    color: white;
+    color: colors(text);
     cursor: pointer;
   }
   &__notification {
@@ -95,14 +95,14 @@
       position: absolute;
       width: 19px;
       height: 19px;
-      background-color: $contrast-color;
+      background-color: colors(contrast);
       font-size: .6rem;
       top: -5px;
       right: -5px;
     }
     &__card {
-      border: 1px solid $text-lighter-color;
-      background-color: $bg-color-transparent-07;
+      border: 1px solid colors(text-light);
+      background-color: colors(bg-transparent-07);
       position: absolute;
       left: -250px;
       top: 51px;
@@ -114,13 +114,13 @@
       transition: all ease 200ms;
     }
     &__item:not(:last-child){
-      border-bottom: 1px solid $text-lighter-color;
+      border-bottom: 1px solid colors(text-light);
     }
     &__item {
       padding: 1rem;
     }
     &__link {
-      color: $text-color;
+      color: colors(text);
     }
     &__img {
       max-width: 70px;
@@ -142,8 +142,8 @@
     font-size: 1.2rem;
   }
   &__profile {
-    background-color: $bg-color-dark;
-    border: 1px solid $bg-color-transparent;
+    background-color: colors(text-dark);
+    border: 1px solid colors(bg-transparent-07);
     position: absolute;
     padding: 1rem .8rem;
     height: 287px;
@@ -181,7 +181,7 @@
     &__accountManage button{
       background: none;
       border: none;
-      color: $text-color;
+      color: colors(text);
       cursor: pointer;
       padding: 1rem 0;
       &::after {
@@ -191,7 +191,7 @@
         position: absolute;
         left: 0;
         padding-top: 1rem;
-        border-bottom: 1px solid $bg-color-lighter;
+        border-bottom: 1px solid colors(bg-lighter);
       }
       &:hover {
         text-decoration: underline;
@@ -204,7 +204,7 @@
         padding-bottom: .5rem;
       }
       &__link {
-        color: $text-color;
+        color: colors(text);
         &:hover {
           text-decoration: underline;
         }

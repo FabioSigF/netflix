@@ -11,13 +11,13 @@
         width: calc(100% - 6px);
         height:  calc(100% - 6px);
         border-radius: 5px;
-        border: 3px solid $text-color;
+        border: 3px solid colors(text);
       }
       .accountsCard__name {
         opacity: 1;
       }
       .prof--ad {
-        background-color: rgba(255, 255, 255, 0.281);
+        background-color: rgba(255, 255, 255, 0.3);
       }
     }
   }
@@ -43,7 +43,7 @@
     }
   }
   &__avatar.prof--ad{
-    color: $text-color;
+    color: colors(text);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,7 +51,7 @@
 
 }
 
-@include media-md {
+@include media(medium) {
   .accountsCard {
     &__name {
       font-size: 1.2rem;
@@ -59,7 +59,7 @@
   }
 }
 
-@include media-bg {
+@include media(normal) {
   .accountsCard{
     &__avatar{
       width: 150px;

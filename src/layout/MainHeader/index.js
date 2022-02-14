@@ -106,7 +106,7 @@ export default function Header({ loggedUser, users }) {
                 <a href="/home" className="menu__profile__manage__link">Centro de ajuda</a>
               </li>
               <li className="menu__profile__manage__item">
-                <Link to="/home" className="menu__profile__manage__link">
+                <Link to="/" className="menu__profile__manage__link">
                   Sair da Netflix
                 </Link>
               </li>

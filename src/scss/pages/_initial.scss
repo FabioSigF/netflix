@@ -13,8 +13,7 @@
     }
   }
   &__logo img{
-    width: 134px;
-    height: 36px;
+    height: 25px;
   }
   &__btns {
     gap: 1rem;
@@ -26,7 +25,7 @@
 
   &__section {
     border-bottom: 8px solid #222;
-    background-color: $bg-color-dark;
+    background-color: colors(bg-dark);
     width: 100%;
   }
 
@@ -50,6 +49,9 @@
     }
     &__container {
       position: relative;
+      padding-top: 70px;
+      padding-left: 6%;
+      padding-right: 6%;
       height: 100%;
       flex-direction: column;
       gap: 1rem;
@@ -57,14 +59,16 @@
     }
   }
   &__title {
-    font-size: 3.125rem;
+    font-size: fontS(large);
     font-weight: 600;
     max-width: 640px;
     margin: 0 auto;
     text-align: center;
   }
   &__subtitle {
-    font-size: 1.625rem;
+    font-size: fontS(medium);
+    font-weight: 400;
+    text-align: center;
     margin-bottom: 1rem;
   }
 
@@ -72,34 +76,32 @@
 
   &__benefits{
     &__item{
-      padding: 4.375rem 0;
+      padding-top: 4.375rem;
+      padding-bottom: 4.375rem;
+      flex-direction: column;
+      gap: 1.5rem;
       &--reverse {
-        flex-direction: row-reverse;
+        flex-direction: column;
 
-        .initial__benefits__titles {
-          padding-right: 0;
-          padding-left: 2rem;
-        }
       }
     }
     &__titles {
-      width: 52%;
-      padding-right: 2rem;
+      width: 100%;
+      text-align: center;
     }
     &__title {
-      font-size: 3.125rem;
+      font-size: fontS(large);
       font-weight: 700;
       margin-bottom: 1rem;
     }
     &__subtitle {
-      font-size: 1.625rem;
+      font-size: fontS(medium);
       font-weight: 400;
-      padding-right: 3rem;
     }
     &__image {
       display: block;
-      width: 48%;
-      min-height: 300px;
+      width: 100%;
+      min-height: 216px;
       height: 100%;
       background-size: contain;
       background-position: center;
@@ -108,10 +110,70 @@
   }
 	&__faq {
     width: 100%;
-    background-color: $bg-color-dark;
+    background-color: colors(bg-dark);
     &__cta {
       padding-top: 4rem;
       padding-bottom: 4rem;
+    }
+  }
+}
+
+@include media(medium) {
+  .initial {
+    &__logo img{
+      width: 134px;
+      height: 36px;
+    }
+    &__title {
+      font-size: fontS(big);
+    }
+    &__subtitle {
+      font-size: fontS(x-large);
+      font-weight: 600;
+    }
+
+    &__home {
+      &__container {
+        padding-top: 60px;
+      }
+    }
+
+    &__benefits{
+      &__item{
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 0;
+        &--reverse {
+          flex-direction: row-reverse;
+          .initial__benefits__titles {
+            padding-right: 0;
+            padding-left: 2rem;
+          }
+        }
+      }
+      &__titles{
+        width: 52%;
+        padding-right: 2rem;
+        text-align: initial;
+      }
+      &__title {
+        font-size: fontS(big);
+        font-weight: 700;
+      }
+      &__subtitle {
+        font-size: fontS(x-large);
+        font-weight: 400;
+        padding-right: 3rem;
+      }
+      &__image {
+        display: block;
+        width: 48%;
+        min-height: 300px;
+        height: 100%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
     }
   }
 }

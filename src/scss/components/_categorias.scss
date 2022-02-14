@@ -14,7 +14,7 @@
     }
   }
   &__lista {
-    background-color: $bg-color-transparent;
+    background-color: colors(bg-transparent-09);
     padding-top: 6rem;
     position: absolute;
     top: 0;
@@ -29,9 +29,9 @@
   
 
   &__link{
-    color: $text-lighter-color;
+    color: colors(text-light);
     &.active {
-      color: $text-color;
+      color: colors(text);
       font-size: 1.1rem;
       font-weight: 700;
     }
@@ -45,11 +45,11 @@
     margin: 1rem 0;
     bottom: 0;
     justify-content: center;
-    background-color: $text-color;
+    background-color: colors(text);
     & span {
       transform: rotate(-45deg) translate(-20px, 20px);
       &, &::before{
-        background: $bg-color-dark;
+        background: colors(bg-dark);
         border-radius: 10px;
         height: 3px;
         width: 35px;

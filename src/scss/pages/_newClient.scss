@@ -1,6 +1,6 @@
 .newClient {
   &__header{
-    background-color: $bg-color-light;
+    background-color: colors(bg-light);
     position: absolute;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
   }
 
   &__bg {
-    background-color: $bg-color-light;
+    background-color: colors(bg-light);
     justify-content: center;
     flex-direction: column;
     margin-top: 2rem;
@@ -30,7 +30,7 @@
     flex-direction: column;
     gap: 1rem;
 
-    color: $text-darkest-color;
+    color: colors(bg-darkest);
   }
   &__img {
     padding: 1rem;
@@ -68,6 +68,6 @@
 
   &__congrat {
     font-size: 3rem;
-    color: green;
+    color: colors(points);
   }
 }

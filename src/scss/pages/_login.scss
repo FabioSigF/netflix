@@ -36,15 +36,15 @@
   }
   
   &__error {
-    background-color: $text-error-color;
+    background-color: colors(error);
     border-radius: 5px;
-    color: $text-color;
+    color: colors(text);
     display: none;
     font-size: .875rem;
     margin-bottom: 1rem;
     padding: 1rem;
     a {
-      color: white;
+      color: colors(text);
       text-decoration: underline;
     }
     &.error {

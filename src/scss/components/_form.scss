@@ -1,5 +1,5 @@
 .form {
-  background-color: $bg-color-transparent;
+  background-color: colors(bg-transparent-09);
   border-radius: 10px;
   max-width: 450px;
   padding: 3.75rem;
@@ -27,7 +27,7 @@
     }
   }
   &__help {
-    color: $text-lighter-color;
+    color: colors(text-light);
     font-size: .875rem;
     margin-bottom: 4rem;
     input {
@@ -37,7 +37,7 @@
   }
   &__helpMe {
     a {
-      color: $text-lighter-color;
+      color: colors(text-light);
       &:hover {
         text-decoration: underline;
       }
@@ -49,27 +49,27 @@
     &__icon {
       background-color: #3B579D;
       border-radius: 3px;
-      color: white;
+      color: colors(text);
       font-size: 1.5em;
       padding: .3rem .1rem 0 .3rem;
     }
     span {
       font-size: .875rem;
-      color: $text-lighter-color;
+      color: colors(text-light);
     }
   }
   &__subscribe {
-    color: $text-lighter-color;
+    color: colors(text-light);
     padding-bottom: 1rem;
     a {
-      color: $text-color;
+      color: colors(text);
       &:hover {
         text-decoration: underline;
       }
     }
   }
   &__reCaptcha {
-    color: $text-lighter-color;
+    color: colors(text-light);
     font-size: .875rem;
     a {
       color: #0071eb;

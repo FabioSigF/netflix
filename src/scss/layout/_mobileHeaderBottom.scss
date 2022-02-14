@@ -1,7 +1,7 @@
 .mhb {
 
   &__container {
-    background-color: $bg-color-dark;
+    background-color: colors(bg-dark);
     padding: 0 1rem;
     justify-content: center;
     position: fixed;
@@ -27,7 +27,7 @@
     }
   }
   &__link {
-    color: $text-color;
+    color: colors(text);
     width: 100%;
     font-size: .5rem;
     flex-direction: column;

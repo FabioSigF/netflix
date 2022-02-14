@@ -8,7 +8,7 @@ export default function MyFooter() {
 
   return (
     <footer className="myFooter">
-      <Container customClass="flex flex_ai_c flex_jc_sb">
+      <Container customClass="myFooter__container flex flex_jc_sb">
         <div className="myFooter__description">
           <p>
             Esse é um projeto que foi desenvolvido por um grande fã do Netflix com o principal objetivo de aprender e testar meu conhecimento como desenvolvedor web. Portanto, todos os créditos de imagem são do Netflix Brasil.
@@ -17,8 +17,8 @@ export default function MyFooter() {
           <p>Dados utilizados do site Themoviedb.org</p>
         </div>
         <div className="myFooter__social flex">
-          <p>Projeto desenvolvido por <strong>Fábio Signorini</strong></p>
-          <p>Contatos:</p>
+          <p className="myFooter__by">Projeto desenvolvido por <strong>Fábio Signorini</strong></p>
+          <p className="myFooter__contacts">Contatos:</p>
           {social.map((item, key) => (
             <div className="myFooter__social__item flex flex_ai_c" key={key}>
               <span className="myFooter__social__icon">

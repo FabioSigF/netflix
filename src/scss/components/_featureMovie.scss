@@ -54,7 +54,7 @@
     & span:not(:last-child)::before {
       content: '';
       border-radius: 50%;
-      background-color: $contrast-color;
+      background-color: colors(contrast);
       display: block;
       position: absolute;
       width: 5px;
@@ -65,7 +65,7 @@
   }
 }
 
-@include media-bg {
+@include media(normal) {
   .featured{
     &::before {
       background: linear-gradient(to right, #111 30%, transparent 70%);
@@ -86,7 +86,7 @@
       margin-top: 1rem;
     }
     &__points {
-      color: #46d369;
+      color: colors(points);
     }
     &__points,
     &__year,

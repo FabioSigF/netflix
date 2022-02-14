@@ -3,6 +3,7 @@
 
 //OTHERS
 @import "abstracts/variables";
+@import "abstracts/functions";
 @import "abstracts/mixins";
 @import "base/base";
 @import "utils/utils";
@@ -23,11 +24,11 @@
 @import "components/movieRow";
 @import "components/linkBtn";
 @import "components/inputEmail";
-@import "components/faq";
 @import "components/languageSelect";
 @import "components/form";
 @import "components/inputForm";
 @import "components/button";
+@import "components/faq";
 @import "components/movieInfo";
 @import "components/myListBtn";
 @import "components/watchBtn";
