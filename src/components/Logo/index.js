@@ -5,7 +5,7 @@ import mobileLogo from '../../imgs/logo_mobile.png';
 export default function Logo() {
   return (
     <a href="/" className="logo">
-      <img src={window.innerWidth > 1199 ? mainLogo : mobileLogo} alt="Netflix Home" />
+      <img src={window.innerWidth > 767 ? mainLogo : mobileLogo} alt="Netflix Home" />
     </a>
   )
 }

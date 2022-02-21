@@ -29,8 +29,6 @@ export default function NewClient() {
           </div>
 
       </main>
-      <Footer />
-      <MyFooter />
     </>
   )
 }

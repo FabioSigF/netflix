@@ -7,7 +7,7 @@ export default function MyFooter() {
   const social = data.myFooterData
 
   return (
-    <footer className="myFooter">
+    <section className="myFooter">
       <Container customClass="myFooter__container flex flex_jc_sb">
         <div className="myFooter__description">
           <p>
@@ -29,6 +29,6 @@ export default function MyFooter() {
           ))}
         </div>
       </Container>
-    </footer>
+    </section>
   )
 }

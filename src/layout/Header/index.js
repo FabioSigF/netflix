@@ -1,10 +1,17 @@
-import MobileHeader from "../../layout/MobileHeader";
-import MainHeader from "../../layout/MainHeader";
+import MenuMobile from "../../layout/MenuMobile";
+import Menu from "../Menu";
 
-export default function Header({windowWidth, movieList, loggedUser, users}){
+export default function Header({windowWidth, movieList, loggedUser, users, searchChange}){
   return(
     <>
-      {windowWidth < 1200 ? <MobileHeader categorias={movieList} /> : <MainHeader loggedUser={loggedUser} users={users} />}
+      {windowWidth < 1024 ? 
+      <MenuMobile categories={movieList} /> 
+      : <Menu 
+          loggedUser={loggedUser} users={users}
+          menuList={true}
+          menuUser={true}
+          searchChange={searchChange}
+      />}
     </>
   )
 }

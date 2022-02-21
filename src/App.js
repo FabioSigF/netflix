@@ -12,12 +12,28 @@ import ConfigCard from "./pages/NewClient/ConfigCard";
 import Congratulations from "./pages/NewClient/Congratulations";
 import MyList from "./pages/Home/MyList";
 import Browse from "./pages/Home/Browse";
+import Footer from "./layout/Footer";
+import SearchPage from "./pages/Home/SearchPage";
+import Series from "./pages/Home/Series";
+import Movies from "./pages/Home/Movies";
+import Latest from "./pages/Home/Latest";
 
 
 export default function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  //home
   const [featureData, setFeatureData] = useState(null);
   const [movieList, setMovieList] = useState([]);
+  //serie
+  const [featureSerieData, setFeatureSerieData] = useState(null);
+  const [seriesList, setSeriesList] = useState([]);
+  //filme
+  const [featureMovieData, setFeatureMovieData] = useState(null);
+  const [moviesList, setMoviesList] = useState([]);
+  //latest
+  const [latestList, setLatestList] = useState([]);
+
+  const [searchChange, setSearchChange] = useState();
 
   //Função para captar o tamanho da tela e enviar ao state
   function handleResize() {
@@ -28,7 +44,7 @@ export default function App() {
     window.addEventListener('resize', handleResize);
 
     const loadAll = async () => {
-      // Pegando a lista Total
+      // Pegando a lista principal
       let list = await Tmdb.getHomeList();
       setMovieList(list);
 
@@ -38,6 +54,35 @@ export default function App() {
       let chosen = originals[0].items.results[randomChosen];
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv')
       setFeatureData(chosenInfo);
+
+      //Pegando lista de séries
+      let serieList = await Tmdb.getSeriesList();
+      setSeriesList(serieList)
+
+      //Pegando o feature de séries
+      let actionSeries = serieList.filter(i => i.slug === 'action');
+      let randomChosenSeries = Math.floor(Math.random() * (actionSeries[0].items.results.length - 1));
+      console.log(actionSeries[0].items.results)
+      let chosenSeries = actionSeries[0].items.results[randomChosenSeries];
+      let chosenInfoSeries = await Tmdb.getMovieInfo(chosenSeries.id, 'tv')
+      setFeatureSerieData(chosenInfoSeries);
+
+      //Pegando lista de filmes
+      let moviesList = await Tmdb.getMoviesList();
+      setMoviesList(moviesList)
+
+      //Pegando o feature de filmes
+      let actionMovies = moviesList.filter(i => i.slug === 'action');
+      let randomChosenMovies = Math.floor(Math.random() * (actionMovies[0].items.results.length - 1));
+      console.log(actionMovies[0].items.results)
+      let chosenMovies = actionMovies[0].items.results[randomChosenMovies];
+      let chosenInfoMovies = await Tmdb.getMovieInfo(chosenMovies.id, 'movie')
+      setFeatureMovieData(chosenInfoMovies);
+
+      //Pegando lista de filmes populares
+      let latestList = await Tmdb.getLatestList();
+      setLatestList(latestList)
+
     }
 
     loadAll();
@@ -83,15 +128,30 @@ export default function App() {
               movieInfo={movieInfo}
               loggedUser={loggedUser}
               users={users}
+              searchChange={setSearchChange}
             />}
         >
           <Route index element={<Browse
             featureData={featureData}
-            windowWidth={windowWidth}
             movieList={movieList}
             openMoreInfo={openMoreInfo}
           />} />
+          <Route path="series" element={<Browse 
+            featureData={featureSerieData}
+            movieList={seriesList}
+            openMoreInfo={openMoreInfo}
+            />} />
+          <Route path="movies" element={<Browse 
+            featureData={featureMovieData}
+            movieList={moviesList}
+            openMoreInfo={openMoreInfo}
+            />} />
+          <Route path="latest" element={<Browse 
+            movieList={latestList}
+            openMoreInfo={openMoreInfo}
+            />} />
           <Route path="my-list" element={<MyList setMovieInfo={openMoreInfo} />} />
+          <Route path="search" element={<SearchPage movieList={movieList} searchChange={searchChange} setMovieInfo={openMoreInfo} />} />
         </Route>
         <Route path="new-client" element={<NewClient />}>
           <Route index element={<ConfigCard />} />
@@ -100,7 +160,7 @@ export default function App() {
           <Route path="congrat" element={<Congratulations />} />
         </Route>
       </Routes>
-
+      <Footer />
     </Router>
   );
 }

@@ -6,6 +6,7 @@ $colors: (
   "error": #e87c03,
   "contrast": #b9090b,
   "points": #46d369,
+  "bg-main": #111,
   "bg-light": #fff,
   "bg-lighter": #141414,
   "bg-transparent-09": rgba(0,0,0,0.9),
@@ -20,6 +21,7 @@ $font-sizes: (
   "small": .875rem,
   "normal": 1rem,
   "medium": 1.125rem,
+  "x-medium": 1.4rem,
   "large": 1.625rem,
   "x-large": 1.75rem,
   "xx-large": 2.5rem,
@@ -28,7 +30,7 @@ $font-sizes: (
 
 $breakpoins: (
   "phone": "320px",
-  "small": "540px",
+  "tablet": "540px",
   "medium": "768px",
   "normal": "1024px",
   "large": "1200px"

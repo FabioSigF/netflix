@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Container from "../../auxiliar/Container";
 import footerData from "./footerData.js";
 import LanguageSelect from '../../components/LanguageSelect'
+import MyFooter from "../MyFooter";
 export default function Footer(){
 
   const data = footerData.footerLinksData;
@@ -22,6 +23,7 @@ export default function Footer(){
           <span className="footer__item">Netflix Brasil</span>
         </div>
       </Container>
+      <MyFooter />
     </footer>
   )
 }

@@ -7,36 +7,43 @@
 @import "abstracts/mixins";
 @import "base/base";
 @import "utils/utils";
+@import "../auxiliar/Container/container";
 
 //LAYOUT 
-@import "layout/header";
-@import "layout/loading";
-@import "layout/mobileHeader";
-@import "layout/mobileHeaderBottom";
-@import "layout/footer";
-@import "layout/myFooter";
+@import "../layout/Header/header";
+@import "../layout/Loading/loading";
+@import "../layout/Menu/menu";
+@import "../layout/MenuMobile/menuMobile";
+@import "../layout/MenuMobile/Categories/categories";
+@import "../layout/MenuBottom/menuBottom";
+@import "../layout/Footer/footer";
+@import "../layout/MyFooter/myFooter";
 
 //COMPONENTS
-@import "components/accountsCard";
-@import "components/categorias";
-@import "components/featureMovie";
-@import "components/logo";
-@import "components/movieRow";
-@import "components/linkBtn";
-@import "components/inputEmail";
-@import "components/languageSelect";
-@import "components/form";
-@import "components/inputForm";
-@import "components/button";
-@import "components/faq";
-@import "components/movieInfo";
-@import "components/myListBtn";
-@import "components/watchBtn";
+@import "../components/AccountsCard/accountsCard";
+@import "../components/FeatureMovie/featureMovie";
+@import "../components/Logo/logo";
+@import "../components/MovieRow/movieRow";
+@import "../components/LinkBtn/linkBtn";
+@import "../components/InputEmail/inputEmail";
+@import "../components/LanguageSelect/languageSelect";
+@import "../components/Form/form";
+@import "../components/InputForm/inputForm";
+@import "../components/Button/button";
+@import "../components/FAQ/faq";
+@import "../components/MovieInfo/movieInfo";
+@import "../components/MyListBtn/myListBtn";
+@import "../components/WatchBtn/watchBtn";
+@import "../components/MenuList/menuList";
+@import "../components/Search/search";
 
 //PAGES
-@import "pages/accounts";
-@import "pages/home";
-@import "pages/initial";
-@import "pages/login";
-@import "pages/newClient";
+@import "../pages/Accounts/accounts";
+@import "../pages/Home/home";
+@import "../pages/Home/MyList/myList";
+@import "../pages/Home/SearchPage/searchPage";
+@import "../pages/Home/Latest/latest";
+@import "../pages/Initial/initial";
+@import "../pages/Login/login";
+@import "../pages/NewClient/newClient";
 

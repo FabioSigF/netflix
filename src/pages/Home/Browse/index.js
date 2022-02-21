@@ -2,13 +2,14 @@ import React from "react";
 import FeatureMovie from "../../../components/FeatureMovie";
 import MovieRow from "../../../components/MovieRow";
 
-export default function Browse({ featureData, windowWidth, movieList, openMoreInfo }) {
+export default function Browse({ featureData, movieList, openMoreInfo }) {
   return (
     <>
-      <FeatureMovie
-        item={featureData}
-        windowWidth={windowWidth}
-      />
+      {featureData &&
+        <FeatureMovie
+          item={featureData}
+        />
+      }
 
       <section className="lists">
         {movieList.map((item, key) => (

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Loading from "../../layout/Loading";
 import Header from "../../layout/Header";
-import MobileHeaderBottom from '../../layout/MobileHeader/MobileHeaderBottom';
-import MyFooter from '../../layout/MyFooter';
+import MenuBottom from '../../layout/MenuBottom';
 import MovieInfo from '../../components/MovieInfo';
 import { Outlet } from 'react-router-dom';
-export default function Home({ windowWidth, movieList, loggedUser, users, movieInfo }) {
+export default function Home({ windowWidth, movieList, loggedUser, users, movieInfo, searchChange }) {
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -26,19 +25,18 @@ export default function Home({ windowWidth, movieList, loggedUser, users, movieI
   else {
     return (
       <>
-        <Header windowWidth={windowWidth} movieList={movieList} loggedUser={loggedUser} users={users} />
+        <Header windowWidth={windowWidth} movieList={movieList} loggedUser={loggedUser} users={users} searchChange={searchChange} />
 
         <Outlet />
 
         {movieInfo &&
           <MovieInfo movie={movieInfo} />
         }
-        <MyFooter />
         {movieList.length <= 0 &&
           <Loading />
         }
         {windowWidth < 1200 &&
-          <MobileHeaderBottom />
+          <MenuBottom />
         }
       </>
     )

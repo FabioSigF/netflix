@@ -72,8 +72,6 @@ export default function Initial() {
           </Container>
         </section>
       </main>
-      <Footer />
-      <MyFooter />
     </>
   )
 }
