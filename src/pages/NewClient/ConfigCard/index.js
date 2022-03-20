@@ -13,7 +13,7 @@ export default function CreatePassword() {
         <span>Crie uma senha para assistir em qualquer dispositivo a qualquer hora.</span>
       </div>
       <div className="newClient__btn">
-        <LinkBtn title="Next" customClass="linkBtn--main" to="/new-client/password" />
+        <LinkBtn title="Próximo" customClass="linkBtn--main" to="/new-client/password" />
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from '../../components/Logo';
 import imgUserApi from "../../imgs/users/imgUserApi";
 import { FaBell, FaCaretDown, FaCaretUp } from 'react-icons/fa';
@@ -27,7 +27,7 @@ export default function Menu({ loggedUser, users, menuList, menuUser, searchChan
   window.addEventListener('scroll', scrollBg)
 
   const dataMenu = [
-    {title: "Início", link: "/home"},
+    {title: "Início", link: "/home/browse"},
     {title: "Séries", link: "/home/series"},
     {title: "Filmes", link: "/home/movies"},
     {title: "Bombando", link: "/home/latest"},
@@ -49,7 +49,7 @@ export default function Menu({ loggedUser, users, menuList, menuUser, searchChan
       <div className="menu__user">
         <Search searchChange={searchChange} />
         <div className="menu__kids">
-          <a href="/home">Infantil</a>
+          <NavLink to="/home/kids">Infantil</NavLink>
         </div>
         <div className="menu__notification">
           <FaBell />

@@ -4,9 +4,11 @@ import Menu from "../Menu";
 export default function Header({windowWidth, movieList, loggedUser, users, searchChange}){
   return(
     <>
-      {windowWidth < 1024 ? 
+      {windowWidth < 1024 
+      ? 
       <MenuMobile categories={movieList} /> 
-      : <Menu 
+      : 
+      <Menu 
           loggedUser={loggedUser} users={users}
           menuList={true}
           menuUser={true}

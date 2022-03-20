@@ -7,8 +7,9 @@
     z-index: 99;
     padding-top: 1.5rem;
   }
-  &__logo img{
-    width: 166px;
+  
+  &__logo img {
+    height: 32px;
   }
 
   &__bg {
@@ -29,11 +30,6 @@
       height: 100%;
     }
   }
-  &__form {
-    position: relative;
-    padding-top: 100px;
-    padding-bottom: 6rem;
-  }
   
   &__error {
     background-color: colors(error);
@@ -52,6 +48,27 @@
     }
     &__redirect {
       text-decoration: underline;
+    }
+  }
+}
+
+@include media(tablet) {
+  .login {
+    &__logo img{
+      height: 45px;
+    }
+  }
+}
+
+@include media(medium){
+  .login {
+    &__logo img{
+      width: 166px;
+    }
+    &__form {
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 6rem;
     }
   }
 }

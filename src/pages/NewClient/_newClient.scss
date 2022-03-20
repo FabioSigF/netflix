@@ -11,26 +11,26 @@
     border-bottom: 1px solid #e6e6e6;
   }
   &__logo img{
-    width: 166px;
+    height: 25px;
   }
 
   &__bg {
     background-color: colors(bg-light);
     justify-content: center;
     flex-direction: column;
-    margin-top: 2rem;
-
+    margin-top: 4rem;
+    height: 100%;
     position: relative;
     min-height: 100vh;
   }
   
   &__card {
-    max-width: 340px;
-    margin: 0 auto;
+    color: colors(text-darkest);
     flex-direction: column;
     gap: 1rem;
-
-    color: colors(bg-darkest);
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 2rem;
   }
   &__img {
     padding: 1rem;
@@ -69,5 +69,23 @@
   &__congrat {
     font-size: 3rem;
     color: colors(points);
+  }
+}
+@include media(tablet){
+  .newClient {
+    &__card {
+      padding: 0;
+    }
+    &__logo img{
+      height: 45px;
+    }
+  }
+}
+
+@include media(medium){
+  .newClient {
+    &__bg {
+      margin-top: 2rem;
+    }
   }
 }

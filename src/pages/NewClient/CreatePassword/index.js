@@ -60,7 +60,7 @@ export default function CreatePassword() {
           onChange={handleChange}
         />
         <div className="newClient__btn">
-          <Button title="Next" type="submit" />
+          <Button title="Próximo" type="submit" />
         </div>
       </form>
     </div>

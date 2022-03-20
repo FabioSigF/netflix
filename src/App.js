@@ -14,9 +14,6 @@ import MyList from "./pages/Home/MyList";
 import Browse from "./pages/Home/Browse";
 import Footer from "./layout/Footer";
 import SearchPage from "./pages/Home/SearchPage";
-import Series from "./pages/Home/Series";
-import Movies from "./pages/Home/Movies";
-import Latest from "./pages/Home/Latest";
 
 
 export default function App() {
@@ -30,8 +27,13 @@ export default function App() {
   //filme
   const [featureMovieData, setFeatureMovieData] = useState(null);
   const [moviesList, setMoviesList] = useState([]);
+  //kids
+  const [featureKidsData, setFeatureKidsData] = useState(null);
+  const [kidsMoviesList, setKidsMoviesList] = useState([]);
   //latest
   const [latestList, setLatestList] = useState([]);
+
+  const [allList, setAllList] = useState([]);
 
   const [searchChange, setSearchChange] = useState();
 
@@ -83,6 +85,21 @@ export default function App() {
       let latestList = await Tmdb.getLatestList();
       setLatestList(latestList)
 
+      //Pegando lista de filmes
+      let allMovieList = await Tmdb.getAllList();
+      setAllList(allMovieList)
+
+      //Pegando lista infantil
+      let kidsList = await Tmdb.getKidsList();
+      setKidsMoviesList(kidsList)
+
+      //Pegando o feature infantil
+      let kidsMovies = kidsList.filter(i => i.slug === 'family');
+      let randomChosenKids = Math.floor(Math.random() * (kidsMovies[0].items.results.length - 1));
+      console.log(kidsMovies[0].items.results)
+      let chosenKids = kidsMovies[0].items.results[randomChosenKids];
+      let chosenInfoKids = await Tmdb.getMovieInfo(chosenKids.id, 'movie')
+      setFeatureKidsData(chosenInfoKids);
     }
 
     loadAll();
@@ -131,27 +148,40 @@ export default function App() {
               searchChange={setSearchChange}
             />}
         >
-          <Route index element={<Browse
+          <Route index path="browse" element={<Browse
             featureData={featureData}
+            windowWidth={windowWidth}
             movieList={movieList}
             openMoreInfo={openMoreInfo}
           />} />
           <Route path="series" element={<Browse 
+            title={"Séries"}
             featureData={featureSerieData}
+            windowWidth={windowWidth}
             movieList={seriesList}
             openMoreInfo={openMoreInfo}
             />} />
           <Route path="movies" element={<Browse 
+            title={"Filmes"}
             featureData={featureMovieData}
+            windowWidth={windowWidth}
             movieList={moviesList}
             openMoreInfo={openMoreInfo}
             />} />
           <Route path="latest" element={<Browse 
+            windowWidth={windowWidth}
             movieList={latestList}
             openMoreInfo={openMoreInfo}
             />} />
+          <Route path="kids" element={<Browse 
+            title={"Infantil"}
+            featureData={featureKidsData}
+            windowWidth={windowWidth}
+            movieList={kidsMoviesList}
+            openMoreInfo={openMoreInfo}
+            />} />
           <Route path="my-list" element={<MyList setMovieInfo={openMoreInfo} />} />
-          <Route path="search" element={<SearchPage movieList={movieList} searchChange={searchChange} setMovieInfo={openMoreInfo} />} />
+          <Route path="search" element={<SearchPage movieList={allList} searchChange={searchChange} setMovieInfo={openMoreInfo} />} />
         </Route>
         <Route path="new-client" element={<NewClient />}>
           <Route index element={<ConfigCard />} />

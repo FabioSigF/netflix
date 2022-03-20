@@ -190,6 +190,16 @@ button {
 
 .menu__kids a {
   color: #fff;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+}
+
+.menu__kids a.active {
+  font-weight: bold;
+}
+
+.menu__kids a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .menu__notification, .menu__search {
@@ -978,7 +988,7 @@ button {
             align-items: flex-start;
     padding-left: 2rem;
     padding-right: 0;
-    padding-bottom: 80px;
+    padding-top: 30px;
   }
   .featured__title {
     font-size: 3.75rem;
@@ -1324,14 +1334,13 @@ button {
 
 .form {
   background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 10px;
-  max-width: 450px;
-  padding: 3.75rem;
+  padding: 7rem 6% 3.75rem;
   position: relative;
   margin: 0 auto;
-  height: 100vh;
+  height: 100%;
   max-height: 660px;
   width: 100%;
+  border-bottom: 1px solid #999999;
 }
 
 .form__title {
@@ -1415,6 +1424,15 @@ button {
 
 .form__reCaptcha a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    border-radius: 10px;
+    border-bottom: none;
+    max-width: 450px;
+    padding: 3.75rem;
+  }
 }
 
 .inputForm {
@@ -1958,10 +1976,74 @@ button {
   margin-top: -150px;
 }
 
+.lists--ajust {
+  margin-top: 150px;
+}
+
 @media screen and (min-width: 1024px) {
   .lists {
-    margin-top: -120px;
+    margin-top: -55px;
   }
+  .lists--ajust {
+    margin-top: 120px;
+  }
+}
+
+.browse__details {
+  position: absolute;
+  z-index: 2;
+  padding-top: 5rem;
+  gap: 2rem;
+}
+
+.browse__title {
+  padding-left: 2rem;
+  font-size: 1.75rem;
+  color: #fff;
+}
+
+.browse__genres {
+  border: 2px solid #fff;
+  cursor: pointer;
+  gap: 1rem;
+  padding: .25rem .625rem;
+}
+
+.browse__genres__container {
+  position: relative;
+}
+
+.browse__genres:hover {
+  background-color: #999999;
+}
+
+.browse__genres__dropdown {
+  display: block;
+  position: absolute;
+}
+
+.browse__genres__list {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #999999;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  height: 100%;
+  max-height: 160px;
+  padding: 1rem;
+  width: 500px;
+}
+
+.browse__genres__link {
+  color: #fff;
+}
+
+.browse__genres__link:hover {
+  text-decoration: underline;
 }
 
 .myList {
@@ -1970,17 +2052,14 @@ button {
   min-height: calc(100vh - 100px);
 }
 
-.myList__title {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
 .myList__item {
   display: block;
 }
 
 .myList__list {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
@@ -1999,6 +2078,14 @@ button {
 .myList__img:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+@media screen and (min-width: 540px) {
+  .myList__list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .searchPage {
@@ -2253,7 +2340,7 @@ button {
 }
 
 .login__logo img {
-  width: 166px;
+  height: 32px;
 }
 
 .login__bg {
@@ -2273,12 +2360,6 @@ button {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.7) 100%);
   width: 100%;
   height: 100%;
-}
-
-.login__form {
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 6rem;
 }
 
 .login__error {
@@ -2304,6 +2385,23 @@ button {
   text-decoration: underline;
 }
 
+@media screen and (min-width: 540px) {
+  .login__logo img {
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .login__logo img {
+    width: 166px;
+  }
+  .login__form {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 6rem;
+  }
+}
+
 .newClient__header {
   background-color: #fff;
   position: absolute;
@@ -2317,7 +2415,7 @@ button {
 }
 
 .newClient__logo img {
-  width: 166px;
+  height: 25px;
 }
 
 .newClient__bg {
@@ -2329,19 +2427,22 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 2rem;
+  margin-top: 4rem;
+  height: 100%;
   position: relative;
   min-height: 100vh;
 }
 
 .newClient__card {
-  max-width: 340px;
-  margin: 0 auto;
+  color: #333;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .newClient__img {
@@ -2387,5 +2488,20 @@ button {
 .newClient__congrat {
   font-size: 3rem;
   color: #46d369;
+}
+
+@media screen and (min-width: 540px) {
+  .newClient__card {
+    padding: 0;
+  }
+  .newClient__logo img {
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .newClient__bg {
+    margin-top: 2rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -16,7 +16,7 @@ export default function Search({searchChange}) {
       navigate("search")
     } 
     if (valor.length <= 0){
-      navigate("/home")
+      navigate("/home/browse")
     }
   }
 

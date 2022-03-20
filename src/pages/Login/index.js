@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Container from "../../auxiliar/Container";
 import Logo from "../../components/Logo";
 import Form from "../../components/Form";
-import Footer from "../../layout/Footer";
-import MyFooter from "../../layout/MyFooter";
 import InputForm from "../../components/InputForm";
 
 export default function Login() {

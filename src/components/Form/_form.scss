@@ -1,13 +1,12 @@
 .form {
   background-color: colors(bg-transparent-09);
-  border-radius: 10px;
-  max-width: 450px;
-  padding: 3.75rem;
+  padding: 7rem 6% 3.75rem;
   position: relative;
   margin: 0 auto;
-  height: 100vh;
+  height: 100%;
   max-height: 660px;
   width: 100%;
+  border-bottom: 1px solid colors(text-light);
 
   &__title {
     font-size: 2rem;
@@ -77,5 +76,14 @@
         text-decoration: underline;
       }
     }
+  }
+}
+
+@include media(medium) {
+  .form {
+    border-radius: 10px;
+    border-bottom: none;
+    max-width: 450px;
+    padding: 3.75rem;
   }
 }
